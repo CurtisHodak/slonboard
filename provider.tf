@@ -12,10 +12,9 @@ provider "aws" {
 
   default_tags {
     tags = {
-      tags = {
-        CreatedBy = "Terraform"
-      }
+      CreatedBy = "Terraform"
     }
   }
 }
+
 
