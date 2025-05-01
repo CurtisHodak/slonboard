@@ -3,6 +3,5 @@ resource "aws_s3_bucket" "sl_on1" {
 
   tags = {
     Description = "New bucket to have something around"
-    test = "new test of glob"
   }
 }
