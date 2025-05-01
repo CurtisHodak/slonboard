@@ -3,4 +3,4 @@ version: "2"
 stack_defaults:
      before_init:
          - echo "checking formatting"
-         - terraform fmt --dif
+         - terraform fmt -dif
