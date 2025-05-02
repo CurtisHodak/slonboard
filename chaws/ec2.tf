@@ -3,7 +3,7 @@ resource "aws_instance" "onboarding1" {
   instance_type = var.instance_type
 
   tags = {
-    test = "yes"
+    test = "another test"
   }
 }
 
