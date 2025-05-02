@@ -7,8 +7,8 @@ resource "aws_s3_bucket" "sl_on1" {
   }
 }
 
-module "sl_on2" {
-  source  = "spacelift.io/curtishodak/s3testmodule/aws"
+module "s3testmodule" {
+  source  = "spacelift.io/curtishodak/terraform-default-s3testmodule/aws"
   version = "0.1.0"
 
   bucket     = "chslonboard2"
