@@ -9,7 +9,7 @@ resource "aws_s3_bucket" "sl_on1" {
 
 module "s3testmodule" {
   source  = "spacelift.io/curtishodak/s3testmodule/default"
-  version = "0.1.2"
+  version = "0.1.3"
 
   bucket     = "chslonboard2"
   versioning = true
