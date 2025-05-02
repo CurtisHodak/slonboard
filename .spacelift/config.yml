@@ -1,0 +1,10 @@
+version: "2"
+
+stack_defaults:
+    before_init:
+        - echo "outputting stuff"
+        - echo "more stuff"
+
+stacks:
+    Onboard1:
+    project_root: chaws 
