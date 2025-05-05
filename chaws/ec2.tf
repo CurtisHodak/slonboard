@@ -2,7 +2,7 @@ resource "aws_instance" "onboarding1" {
   ami           = var.instance_ami
   instance_type = var.instance_type
   key_name = "chkey1"
-  volume_size = "25"
+  volume_size = 25
   vpc_security_group_ids = ["sg-0cbca007e6ac73276"]
 
   tags = {
