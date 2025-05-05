@@ -18,30 +18,30 @@ variable "instance_type" {
 
 variable "worker_pool_config" {
   description = "Spacelift Token"
-  type = string
-  default= ""
+  type        = string
+  default     = ""
 }
 
 variable "worker_pool_private_key" {
   description = "Private key"
-  type = string
-  default= ""
+  type        = string
+  default     = ""
 }
 
 variable "worker_pool_id" {
   description = "worker_pool_id"
-  type = string
-  default = ""
+  type        = string
+  default     = ""
 }
 
 variable "worker_pool_security_groups" {
   description = "SGs in AWS"
-  type = list
-  default []
+  type        = list(any)
+  default     = []
 }
 
 variable "worker_pool_subnets" {
   description = "SGs in AWS"
-  type = list
-  default []
+  type        = list(any)
+  default     = []
 }
