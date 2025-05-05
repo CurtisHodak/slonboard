@@ -9,7 +9,7 @@ resource "aws_instance" "onboarding1" {
   }
 
   tags = {
-    test = "test glob"
+    test = "test glob2"
   }
 }
 
