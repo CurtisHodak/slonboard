@@ -8,6 +8,8 @@ stacks:
         project_root: compute-storage
         terraform_version: 1.5.7
     database:
+        after_init: 
+            - echo "whyyyyyyy"
         project_root: database
         terraform_version: 1.5.7
 
