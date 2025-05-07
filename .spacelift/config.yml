@@ -5,9 +5,12 @@ stack_defaults:
         - ls -la
 
 stacks:
+    onboard1:
+        project_root: "chaws"
+        terraform_version: "1.5.6"
     compute-storage:
         project_root: "compute-storage"
-        terraform_vsersion: "1.5.7"
+        terraform_version: "1.5.7"
     database:
         project_root: "other"
         terraform_version: "1.5.7"
