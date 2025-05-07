@@ -13,5 +13,5 @@ stacks:
         project_root: "compute-storage"
         terraform_version: "1.5.7"
     database:
-        project_root: "other"
+        project_root: "database"
         terraform_version: "1.5.7"
