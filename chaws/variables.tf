@@ -1,3 +1,9 @@
+variable "aws_region" {
+  description = "AWS Region for creating resources"
+  type        = string
+  default     = "us-east-2"
+}
+
 variable "worker_pool_config" {
   description = "Spacelift Token"
   type        = string
