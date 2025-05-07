@@ -7,11 +7,11 @@ stack_defaults:
 
 stacks:
     onboard1:
-        project_root: "chaws"
-        terraform_version: "1.5.6"
+        project_root: chaws
+        terraform_version: 1.5.7
     compute-storage:
-        project_root: "compute-storage"
-        terraform_version: "1.5.7"
+        project_root: compute-storage
+        terraform_version: 1.5.7
     database:
-        project_root: "database"
-        terraform_version: "1.5.7"
+        project_root: database
+        terraform_version: 1.5.7
