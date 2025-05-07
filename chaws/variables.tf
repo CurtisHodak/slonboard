@@ -16,6 +16,11 @@ variable "instance_type" {
   default     = ""
 }
 
+variable "volume_size" {
+  description = "Default volume size"
+  type = number
+}
+
 variable "worker_pool_config" {
   description = "Spacelift Token"
   type        = string
