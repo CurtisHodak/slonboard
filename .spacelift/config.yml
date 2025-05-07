@@ -1,19 +1,6 @@
 version: "2"
 
-stacks:
-    onboard1:
-        project_root: chaws
-        terraform_version: 1.5.7
-    compute-storage:
-        project_root: compute-storage
-        terraform_version: 1.5.7
-    database:
-        after_init: 
-            - echo "whyyyyyyy"
-        project_root: database
-        terraform_version: 1.5.7
-
 stack_defaults:
     before_init:
-        - echo "waaaaaaah"    
+        - echo "works"    
         - ls -la
