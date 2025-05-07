@@ -1,0 +1,13 @@
+version: 2
+
+stack_defaults:
+    befor_init:
+        - ls -la
+
+stacks:
+    compute-storage:
+        project_root: "compute-storage"
+        terraform_vsersion: "1.5.7"
+    database:
+        project_root: "database"
+        terraform_version: "1.5.7"
