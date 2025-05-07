@@ -19,6 +19,7 @@ variable "instance_type" {
 variable "volume_size" {
   description = "Default volume size"
   type = number
+  default = 5
 }
 
 variable "worker_pool_config" {
