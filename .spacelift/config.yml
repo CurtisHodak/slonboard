@@ -1,7 +1,8 @@
 version: 2
 
 stack_defaults:
-    befor_init:
+    before_init:
+        - echo "waaaaaaah"    
         - ls -la
 
 stacks:
