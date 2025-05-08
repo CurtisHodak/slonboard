@@ -6,13 +6,13 @@ variable "aws_region" {
 
 variable "db_user" {
   description = "Main user of the db"
-  type = string
-  default = ""
+  type        = string
+  default     = ""
 }
 
 variable "db_password" {
   description = "Password for user"
-  type = string
-  default = ""
+  type        = string
+  default     = ""
 }
 

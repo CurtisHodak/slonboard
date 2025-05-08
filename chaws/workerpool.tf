@@ -9,10 +9,10 @@ module "my_workerpool" {
     export SPACELIFT_SENSITIVE_OUTPUT_UPLOAD_ENABLED=true
   EOF
 
-  ec2_instance_size = "t3.medium"
-  min_size        = 1
-  max_size        = 5
-  worker_pool_id  = var.worker_pool_id
-  security_groups = var.worker_pool_security_groups
-  vpc_subnets     = var.worker_pool_subnets
+  ec2_instance_type = "t3.medium"
+  min_size          = 1
+  max_size          = 5
+  worker_pool_id    = var.worker_pool_id
+  security_groups   = var.worker_pool_security_groups
+  vpc_subnets       = var.worker_pool_subnets
 }
