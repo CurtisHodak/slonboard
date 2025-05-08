@@ -2,6 +2,12 @@ resource "aws_vpc" "main" {
   cidr_block = "10.0.0.0/16"
   instance_tenancy = "default"
 }
+# Generate random string
+resource "random_string" "suffix" {
+  length  = 8
+  special = false
+  upper   = false
+}
 # Private Subnet
 resource "aws_subnet" "private" {
   vpc_id            = aws_vpc.main.id
