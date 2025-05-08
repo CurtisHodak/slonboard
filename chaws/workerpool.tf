@@ -9,7 +9,7 @@ module "my_workerpool" {
     export SPACELIFT_SENSITIVE_OUTPUT_UPLOAD_ENABLED=true
   EOF
 
-  spacelift_pi_key_id        = var.spacelift_api_key_id
+  spacelift_api_key_id       = var.spacelift_api_key_id
   spacelift_api_key_secret   = var.spacelift_api_key_secret
   spacelift_api_key_endpoint = var.spacelift_api_key_endpoint
   ec2_instance_type          = "t3.medium"
