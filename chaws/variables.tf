@@ -34,7 +34,7 @@ variable "worker_pool_subnets" {
   default     = []
 }
 
-variable "spacelift_pi_key_id" {
+variable "spacelift_api_key_id" {
   type        = string
   description = "ID of the Spacelift API key to use"
   default     = null
