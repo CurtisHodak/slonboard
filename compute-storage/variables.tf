@@ -21,3 +21,9 @@ variable "volume_size" {
   type        = number
   default     = 5
 }
+
+variable "main_vpc_id" {
+  description = "default vpc for instances and other items"
+  type        = string
+  default     = "vpc-0589bc7eac2f31a65"
+}
