@@ -1,14 +1,14 @@
-# resource "aws_instance" "onboarding1" {
-#   ami                    = var.instance_ami
-#   instance_type          = var.instance_type
-#   key_name               = "chkey1"
-#   vpc_security_group_ids = ["sg-08958f363d0e79c41"]
+resource "aws_instance" "onboarding1" {
+  ami                    = var.instance_ami
+  instance_type          = var.instance_type
+  key_name               = "chkey1"
+  vpc_security_group_ids = ["sg-08958f363d0e79c41"]
 
-#   root_block_device {
-#     volume_size = var.volume_size
-#   }
+  root_block_device {
+    volume_size = var.volume_size
+  }
 
-#   tags = {
-#     test = "New Changes1"
-#   }
-# }
+  tags = {
+    test = "New Changes1"
+  }
+}
