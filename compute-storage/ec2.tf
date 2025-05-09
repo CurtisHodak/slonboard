@@ -1,5 +1,4 @@
 resource "aws_instance" "onboarding1" {
-  vpc_id                 = var.main_vpc_id
   ami                    = var.instance_ami
   instance_type          = var.instance_type
   key_name               = "chkey1"
