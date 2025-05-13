@@ -48,3 +48,13 @@ resource "spacelift_context_attachment" "firstcontext" {
   context_id = "firstcontext"
   stack_id   = spacelift_stack.main.id
 }
+
+resource "spacelift_context_attachment" "firstcontext1" {
+  context_id = "firstcontext"
+  stack_id   = spacelift_stack.compute-storage.id
+}
+
+resource "spacelift_context_attachment" "firstcontext2" {
+  context_id = "firstcontext"
+  stack_id   = spacelift_stack.database.id
+}
