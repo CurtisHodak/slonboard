@@ -2,7 +2,7 @@ resource "spacelift_stack" "main" {
   name     = "main"
   space_id = "root"
 
-  repository   = "slonbaord"
+  repository   = "slonboard"
   branch       = "main"
   project_root = "chaws"
 
