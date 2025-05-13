@@ -1,11 +1,11 @@
-resource "aws_iam_user" "lb" {
-  name = "loadbalancer"
-  path = "/system/"
+# resource "aws_iam_user" "lb" {
+#   name = "loadbalancer"
+#   path = "/system/"
 
-  tags = {
-    tag-key = "tag-value"
-  }
-}
+#   tags = {
+#     tag-key = "tag-value"
+#   }
+# }
 
 # resource "aws_vpc" "main" {
 #   cidr_block       = "10.0.0.0/16"
