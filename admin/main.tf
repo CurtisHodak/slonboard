@@ -1,8 +1,7 @@
 resource "spacelift_stack" "main" {
    name = "main"
    space_id = "root"
-
-   namespace = "spacelift-io"
+   
    repository = "slonbaord"
    branch = "main"
    project_root = "chaws"
