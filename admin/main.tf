@@ -43,6 +43,54 @@ resource "spacelift_stack" "database" {
   github_action_deploy             = false
 }
 
+resource "spacelift_stack" "dependency1" {
+  name     = "dependency1"
+  space_id = "root"
+
+  repository   = "slonboard"
+  branch       = "main"
+  project_root = "d1"
+
+  terraform_version                = "1.5.7"
+  terraform_workflow_tool          = "TERRAFORM_FOSS"
+  terraform_smart_sanitization     = true
+  enable_well_known_secret_masking = true
+  github_action_deploy             = false
+  additional_project_globs = ["provider.tf"]
+}
+
+resource "spacelift_stack" "dependency2" {
+  name     = "dependency2"
+  space_id = "root"
+
+  repository   = "slonboard"
+  branch       = "main"
+  project_root = "d2"
+
+  terraform_version                = "1.5.7"
+  terraform_workflow_tool          = "TERRAFORM_FOSS"
+  terraform_smart_sanitization     = true
+  enable_well_known_secret_masking = true
+  github_action_deploy             = false
+  additional_project_globs = ["provider.tf"]
+}
+
+resource "spacelift_stack" "dependency3" {
+  name     = "dependency3"
+  space_id = "root"
+
+  repository   = "slonboard"
+  branch       = "main"
+  project_root = "d3"
+
+  terraform_version                = "1.5.7"
+  terraform_workflow_tool          = "TERRAFORM_FOSS"
+  terraform_smart_sanitization     = true
+  enable_well_known_secret_masking = true
+  github_action_deploy             = false
+  additional_project_globs = ["provider.tf"]
+}
+
 
 resource "spacelift_context_attachment" "firstcontext" {
   context_id = "firstcontext"
