@@ -14,6 +14,5 @@ module "main_workerpool" {
   max_size          = 5
   worker_pool_id    = var.worker_pool_id
   security_groups   = [aws_security_group.main.id]
-  vpc_subnets       = [aws_subnet.private.id, aws_subnet.public.id]
-
+  vpc_subnets       = [aws_subnet.public.id, aws_subnet.private.id]
 }
