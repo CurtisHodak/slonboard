@@ -22,17 +22,17 @@ variable "worker_pool_id" {
   default     = ""
 }
 
-variable "worker_pool_security_groups" {
-  description = "SGs in AWS"
-  type        = list(any)
-  default     = []
-}
+# variable "worker_pool_security_groups" {
+#   description = "SGs in AWS"
+#   type        = list(any)
+#   default     = []
+# }
 
-variable "worker_pool_subnets" {
-  description = "SGs in AWS"
-  type        = list(any)
-  default     = []
-}
+# variable "worker_pool_subnets" {
+#   description = "SGs in AWS"
+#   type        = list(any)
+#   default     = []
+# }
 
 variable "spacelift_api_key_id" {
   type        = string
