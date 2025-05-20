@@ -11,6 +11,8 @@ resource "spacelift_stack" "main" {
   terraform_smart_sanitization     = true
   enable_well_known_secret_masking = true
   github_action_deploy             = false
+  runner_image = "curtishodak/spacelifttest"
+  worker_pool_id = "01JTTTH31F1KDXDPQZWH46GQKP"
 }
 
 resource "spacelift_stack" "compute-storage" {
@@ -73,6 +75,7 @@ resource "spacelift_stack" "dependency2" {
   enable_well_known_secret_masking = true
   github_action_deploy             = false
   additional_project_globs = ["provider.tf"]
+  labels = ["feature:enable_git_checkout"]
 }
 
 resource "spacelift_stack" "dependency3" {
@@ -89,6 +92,21 @@ resource "spacelift_stack" "dependency3" {
   enable_well_known_secret_masking = true
   github_action_deploy             = false
   additional_project_globs = ["provider.tf"]
+}
+
+resource "spacelift_stack" "eks" {
+  name     = "main"
+  space_id = "root"
+
+  repository   = "slonboard"
+  branch       = "main"
+  project_root = "eks"
+
+  terraform_version                = "1.5.7"
+  terraform_workflow_tool          = "TERRAFORM_FOSS"
+  terraform_smart_sanitization     = true
+  enable_well_known_secret_masking = true
+  github_action_deploy             = false
 }
 
 
