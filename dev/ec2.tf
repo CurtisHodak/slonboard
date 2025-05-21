@@ -1,4 +1,4 @@
-resource "aws_instance" "dev1" {
+resource "aws_instance" "dev1a" {
   ami                    = var.instance_ami
   instance_type          = var.instance_type
   key_name               = "chkey1"
@@ -8,6 +8,7 @@ resource "aws_instance" "dev1" {
   }
 
   tags = {
+    name = "dev1a"
     test = "New Changes1"
   }
 }
