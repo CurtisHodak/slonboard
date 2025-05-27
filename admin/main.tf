@@ -106,3 +106,10 @@ resource "spacelift_context_attachment" "firstcontext2" {
   context_id = "firstcontext"
   stack_id   = spacelift_stack.database.id
 }
+
+resource "spacelift_environment_variable" "tfTestVar" {
+  name        = "tftestvar"
+  value       = "/project/spacelift/kubeconfig"
+  write_only  = false
+  description = "testvar"
+}
