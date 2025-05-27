@@ -56,7 +56,7 @@ resource "spacelift_stack" "dependency1" {
   terraform_smart_sanitization     = true
   enable_well_known_secret_masking = true
   github_action_deploy             = false
-  additional_project_globs = ["provider.tf"]
+  additional_project_globs         = ["provider.tf"]
 }
 
 resource "spacelift_stack" "dependency2" {
@@ -72,7 +72,7 @@ resource "spacelift_stack" "dependency2" {
   terraform_smart_sanitization     = true
   enable_well_known_secret_masking = true
   github_action_deploy             = false
-  additional_project_globs = ["provider.tf"]
+  additional_project_globs         = ["provider.tf"]
 }
 
 resource "spacelift_stack" "dependency3" {
@@ -88,7 +88,7 @@ resource "spacelift_stack" "dependency3" {
   terraform_smart_sanitization     = true
   enable_well_known_secret_masking = true
   github_action_deploy             = false
-  additional_project_globs = ["provider.tf"]
+  additional_project_globs         = ["provider.tf"]
 }
 
 
@@ -109,6 +109,7 @@ resource "spacelift_context_attachment" "firstcontext2" {
 
 resource "spacelift_environment_variable" "tfTestVar" {
   name        = "tftestvar"
+  stack_id    = "admin"
   value       = "/project/spacelift/kubeconfig"
   write_only  = false
   description = "testvar"
