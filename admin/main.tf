@@ -104,7 +104,7 @@ resource "spacelift_context_attachment" "firstcontext1" {
 
 resource "spacelift_context_attachment" "firstcontext2" {
   context_id = "firstcontext"
-  stack_id   = spacelift_stack.database.id
+  stack_id   = spacelift_stack.database.id   
 }
 
 resource "spacelift_environment_variable" "tfTestVar" {
