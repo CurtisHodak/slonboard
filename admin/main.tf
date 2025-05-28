@@ -30,7 +30,7 @@ resource "spacelift_stack" "compute-storage" {
 
 resource "spacelift_stack" "database" {
   name     = "database"
-  space_id = "providers-01JVZD87T4ZCCXZTWPV3SM39CB"
+  space_id = "us-east-1-01JT94PPW0E737G9JMT5HBSDK3"
 
   repository   = "slonboard"
   branch       = "main"
