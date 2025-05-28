@@ -123,4 +123,4 @@ resource "spacelift_environment_variable" "tfTestVar" {
 #     "policy:pr_comment_plan",
 #     "policy:scope:all_spaces",
 #   ]
-}
+# }
