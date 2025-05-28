@@ -114,3 +114,13 @@ resource "spacelift_environment_variable" "tfTestVar" {
   write_only  = false
   description = "testvar"
 }
+resource "spacelift_policy" "pr_comment_plan" {
+  name = "pr_comment_plan"
+  body = "sample = true"
+  type = "NOTIFICATION"
+  description = "Comment on PRs with the plan"
+  labels = [
+    "policy:pr_comment_plan",
+    "policy:scope:all_spaces",
+  ]
+}
