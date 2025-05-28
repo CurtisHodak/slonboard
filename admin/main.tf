@@ -116,7 +116,7 @@ resource "spacelift_environment_variable" "tfTestVar" {
 }
 resource "spacelift_policy" "pr_comment_plan" {
   name = "pr_comment_plan"
-  body = "sample = true"
+  body = "package spacelift \nsample = true"
   type = "NOTIFICATION"
   description = "Comment on PRs with the plan"
   labels = [
