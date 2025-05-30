@@ -134,6 +134,5 @@ resource "spacelift_context_attachment" "testmodule" {
 resource "spacelift_scheduled_task" "test" {
   stack_id = spacelift_stack.main.id
   command = "ls -la"
-  every = ["05 4 * * *"]
-  timezone = "ET"
+  every = ["07 8 * * *"]
 }
