@@ -124,3 +124,8 @@ resource "spacelift_environment_variable" "tfTestVar" {
 #     "policy:scope:all_spaces",
 #   ]
 # }
+
+resource "spacelift_context_attachment" "firstcontextmodule" {
+  context_id = "firstcontext"
+  module_id   = "terraform-default-s3testmodule"
+}
