@@ -125,7 +125,7 @@ resource "spacelift_environment_variable" "tfTestVar" {
 #   ]
 # }
 
-resource "spacelift_context_attachment" "firstcontextmodule" {
-  context_id = "firstcontext"
+resource "spacelift_context_attachment" "testmodule" {
+  context_id = "test"
   module_id   = "terraform-default-s3testmodule"
 }
