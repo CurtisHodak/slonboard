@@ -7,14 +7,14 @@
 #   }
 # }
 
-# module "s3testmodule" {
-#   source  = "spacelift.io/curtishodak/s3testmodule/default"
-#   version = "0.1.3"
+module "s3testmodule" {
+  source  = "spacelift.io/curtishodak/s3testmodule/default"
+  version = "~>0.1.0"
 
-#   bucket     = "chslonboard2"
-#   versioning = true
+  bucket     = "chslonboard2"
+  versioning = true
 
-#   tags = {
-#     madeone = "yes"
-#   }
-# }
+  tags = {
+    madeone = "yes"
+  }
+}
