@@ -1,11 +1,11 @@
-# resource "aws_s3_bucket" "sl_on1" {
-#   bucket = "ch-slonboard-1"
+resource "aws_s3_bucket" "sl_on1" {
+  bucket = "ch-slonboard-1"
 
-#   tags = {
-#     Description = "New bucket to have something around"
-#     Test        = "this should do something now 4"
-#   }
-# }
+  tags = {
+    Description = "New bucket to have something around"
+    Test        = "this should do something now 4"
+  }
+}
 
 module "s3testmodule" {
   source  = "spacelift.io/curtishodak/s3testmodule/default"
