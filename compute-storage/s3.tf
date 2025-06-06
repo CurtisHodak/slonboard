@@ -15,7 +15,7 @@ module "s3testmodule" {
   versioning = true
 
   tags = {
-                 madeone = "no"
+                 madeone = "yes"
   
   
     } 
