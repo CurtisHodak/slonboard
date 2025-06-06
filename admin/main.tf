@@ -21,8 +21,8 @@ resource "spacelift_stack" "compute-storage" {
   branch       = "main"
   project_root = "compute-storage"
 
-  terraform_version                = "1.9.1"
-  terraform_workflow_tool          = "OPEN_TOFU"
+  terraform_version                = "1.5.7"
+  terraform_workflow_tool          = "TERRAFORM_FOSS"
   terraform_smart_sanitization     = true
   enable_well_known_secret_masking = true
   github_action_deploy             = false
