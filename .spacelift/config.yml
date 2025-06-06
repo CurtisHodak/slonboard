@@ -4,4 +4,9 @@ stack_defaults:
     before_init:
         - echo "works"    
         - ls -la
-        - tofu fmt -check
+
+stacks:
+    compute-storage:
+        before_init:
+            - echo "check fmt"
+            - tofu fmt -check
