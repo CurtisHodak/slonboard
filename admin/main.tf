@@ -104,7 +104,7 @@ resource "spacelift_context_attachment" "firstcontext1" {
 
 resource "spacelift_context_attachment" "firstcontext2" {
   context_id = "firstcontext"
-  stack_id   = spacelift_stack.database.id   
+  stack_id   = spacelift_stack.database.id
 }
 
 resource "spacelift_environment_variable" "tfTestVar" {
@@ -127,12 +127,12 @@ resource "spacelift_environment_variable" "tfTestVar" {
 
 resource "spacelift_context_attachment" "testmodule" {
   context_id = "firstcontext"
-  module_id   = "terraform-default-s3testmodule"
+  module_id  = "terraform-default-s3testmodule"
 }
 
 
 resource "spacelift_scheduled_task" "test" {
   stack_id = spacelift_stack.main.id
-  command = "ls -la"
-  every = ["07 8 * * *"]
+  command  = "ls -la"
+  every    = ["07 8 * * *"]
 }
