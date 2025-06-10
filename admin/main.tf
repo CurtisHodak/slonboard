@@ -124,10 +124,3 @@ resource "spacelift_context_attachment" "testmodule" {
   context_id = "firstcontext"
   module_id  = "terraform-default-s3testmodule"
 }
-
-
-resource "spacelift_scheduled_task" "test" {
-  stack_id = spacelift_stack.main.id
-  command  = "ls -la"
-  every    = ["07 8 * * *"]
-}
