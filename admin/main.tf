@@ -1,15 +1,3 @@
-terraform {
-  backend "remote" {
-    hostname = "spacelift.io"
-    organization = "curtishodak"
-
-    workspaces {
-     name = "admin"
-    }  
-  }
-  
-}
-
 # resource "spacelift_stack" "main" {
 #   name     = "main"
 #   space_id = "root"
