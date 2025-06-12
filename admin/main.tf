@@ -1,17 +1,29 @@
-resource "spacelift_stack" "main" {
-  name     = "main"
-  space_id = "root"
+terraform {
+  backend "remote" {
+    hostname = "spacelift.io"
+    organization = "curtishodak"
 
-  repository   = "slonboard"
-  branch       = "main"
-  project_root = "chaws"
-
-  terraform_version                = "1.5.7"
-  terraform_workflow_tool          = "TERRAFORM_FOSS"
-  terraform_smart_sanitization     = true
-  enable_well_known_secret_masking = true
-  github_action_deploy             = false
+    workspaces {
+     name = "admin"
+    }  
+  }
+  
 }
+
+# resource "spacelift_stack" "main" {
+#   name     = "main"
+#   space_id = "root"
+
+#   repository   = "slonboard"
+#   branch       = "main"
+#   project_root = "chaws"
+
+#   terraform_version                = "1.5.7"
+#   terraform_workflow_tool          = "TERRAFORM_FOSS"
+#   terraform_smart_sanitization     = true
+#   enable_well_known_secret_masking = true
+#   github_action_deploy             = false
+# }
 
 # resource "spacelift_stack" "compute-storage" {
 #   name     = "compute-storage"
@@ -28,87 +40,87 @@ resource "spacelift_stack" "main" {
 #   github_action_deploy             = false
 # }
 
-resource "spacelift_stack" "database" {
-  name     = "database"
-  space_id = "root"
+# resource "spacelift_stack" "database" {
+#   name     = "database"
+#   space_id = "root"
 
-  repository   = "slonboard"
-  branch       = "main"
-  project_root = "database"
+#   repository   = "slonboard"
+#   branch       = "main"
+#   project_root = "database"
 
-  terraform_version                = "1.5.7"
-  terraform_workflow_tool          = "TERRAFORM_FOSS"
-  terraform_smart_sanitization     = true
-  enable_well_known_secret_masking = true
-  github_action_deploy             = false
-}
+#   terraform_version                = "1.5.7"
+#   terraform_workflow_tool          = "TERRAFORM_FOSS"
+#   terraform_smart_sanitization     = true
+#   enable_well_known_secret_masking = true
+#   github_action_deploy             = false
+# }
 
-resource "spacelift_stack" "dependency1" {
-  name     = "dependency1"
-  space_id = "root"
+# resource "spacelift_stack" "dependency1" {
+#   name     = "dependency1"
+#   space_id = "root"
 
-  repository   = "slonboard"
-  branch       = "main"
-  project_root = "d1"
+#   repository   = "slonboard"
+#   branch       = "main"
+#   project_root = "d1"
 
-  terraform_version                = "1.5.7"
-  terraform_workflow_tool          = "TERRAFORM_FOSS"
-  terraform_smart_sanitization     = true
-  enable_well_known_secret_masking = true
-  github_action_deploy             = false
-  additional_project_globs         = ["provider.tf"]
-}
+#   terraform_version                = "1.5.7"
+#   terraform_workflow_tool          = "TERRAFORM_FOSS"
+#   terraform_smart_sanitization     = true
+#   enable_well_known_secret_masking = true
+#   github_action_deploy             = false
+#   additional_project_globs         = ["provider.tf"]
+# }
 
-resource "spacelift_stack" "dependency2" {
-  name     = "dependency2"
-  space_id = "root"
+# resource "spacelift_stack" "dependency2" {
+#   name     = "dependency2"
+#   space_id = "root"
 
-  repository   = "slonboard"
-  branch       = "main"
-  project_root = "d2"
+#   repository   = "slonboard"
+#   branch       = "main"
+#   project_root = "d2"
 
-  terraform_version                = "1.5.7"
-  terraform_workflow_tool          = "TERRAFORM_FOSS"
-  terraform_smart_sanitization     = true
-  enable_well_known_secret_masking = true
-  github_action_deploy             = false
-  additional_project_globs         = ["provider.tf"]
-}
+#   terraform_version                = "1.5.7"
+#   terraform_workflow_tool          = "TERRAFORM_FOSS"
+#   terraform_smart_sanitization     = true
+#   enable_well_known_secret_masking = true
+#   github_action_deploy             = false
+#   additional_project_globs         = ["provider.tf"]
+# }
 
-resource "spacelift_stack" "dependency3" {
-  name     = "dependency3"
-  space_id = "root"
+# resource "spacelift_stack" "dependency3" {
+#   name     = "dependency3"
+#   space_id = "root"
 
-  repository   = "slonboard"
-  branch       = "main"
-  project_root = "d3"
+#   repository   = "slonboard"
+#   branch       = "main"
+#   project_root = "d3"
 
-  terraform_version                = "1.5.7"
-  terraform_workflow_tool          = "TERRAFORM_FOSS"
-  terraform_smart_sanitization     = true
-  enable_well_known_secret_masking = true
-  github_action_deploy             = false
-  additional_project_globs         = ["provider.tf"]
-}
+#   terraform_version                = "1.5.7"
+#   terraform_workflow_tool          = "TERRAFORM_FOSS"
+#   terraform_smart_sanitization     = true
+#   enable_well_known_secret_masking = true
+#   github_action_deploy             = false
+#   additional_project_globs         = ["provider.tf"]
+# }
 
 
-resource "spacelift_context_attachment" "firstcontext" {
-  context_id = "firstcontext"
-  stack_id   = spacelift_stack.main.id
-}
+# resource "spacelift_context_attachment" "firstcontext" {
+#   context_id = "firstcontext"
+#   stack_id   = spacelift_stack.main.id
+# }
 
-resource "spacelift_context_attachment" "firstcontext2" {
-  context_id = "firstcontext"
-  stack_id   = spacelift_stack.database.id
-}
+# resource "spacelift_context_attachment" "firstcontext2" {
+#   context_id = "firstcontext"
+#   stack_id   = spacelift_stack.database.id
+# }
 
-resource "spacelift_environment_variable" "tfTestVar" {
-  name        = "tftestvar"
-  stack_id    = "admin"
-  value       = "/project/spacelift/kubeconfig"
-  write_only  = false
-  description = "testvar"
-}
+# resource "spacelift_environment_variable" "tfTestVar" {
+#   name        = "tftestvar"
+#   stack_id    = "admin"
+#   value       = "/project/spacelift/kubeconfig"
+#   write_only  = false
+#   description = "testvar"
+# }
 # resource "spacelift_policy" "pr_comment_plan" {
 #   name = "pr_comment_plan"
 #   body = file("./test.rego")
@@ -120,7 +132,14 @@ resource "spacelift_environment_variable" "tfTestVar" {
 #   ]
 # }
 
-resource "spacelift_context_attachment" "testmodule" {
-  context_id = "firstcontext"
-  module_id  = "terraform-default-s3testmodule"
-}
+# resource "spacelift_context_attachment" "testmodule" {
+#   context_id = "firstcontext"
+#   module_id  = "terraform-default-s3testmodule"
+# }
+
+
+# resource "spacelift_scheduled_task" "test" {
+#   stack_id = spacelift_stack.main.id
+#   command  = "ls -la"
+#   every    = ["07 8 * * *"]
+# }
