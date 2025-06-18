@@ -6,7 +6,7 @@ variable "aws_region" {
 
 variable "instance_type" {
   type        = string
-  default     = "t2.micro"
+  default     = "t4g.nano"
   description = "type of instance"
 }
 
