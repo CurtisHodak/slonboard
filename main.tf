@@ -4,10 +4,10 @@ resource "aws_instance" "onboarding1" {
   key_name      = "chkey1"
 
   root_block_device {
-    volume_size = 20
+    volume_size = 17
   }
 
   tags = {
-    test = "New Changes1"
+    test = "New Changes12"
   }
 }
