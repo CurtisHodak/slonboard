@@ -13,7 +13,7 @@ resource "aws_instance" "onboarding1" {
 }
 
 resource "aws_instance" "onboarding2" {
-  ami           = var.instance_ami
+  ami           = 
   instance_type = var.instance_type
   key_name      = "chkey1"
 
