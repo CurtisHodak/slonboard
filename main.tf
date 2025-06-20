@@ -8,12 +8,12 @@ resource "aws_instance" "onboarding1" {
   }
 
   tags = {
-    test = "New Changes12"
+    test = "New Changes123"
   }
 }
 
 resource "aws_instance" "onboarding2" {
-  ami           = "var.instance_ami"
+  ami           = 
   instance_type = var.instance_type
   key_name      = "chkey1"
 
