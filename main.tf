@@ -4,10 +4,24 @@ resource "aws_instance" "onboarding1" {
   key_name      = "chkey1"
 
   root_block_device {
-    volume_size = 17
+    volume_size = 20
   }
 
   tags = {
     test = "New Changes12"
+  }
+}
+
+resource "aws_instance" "onboarding2" {
+  ami           = "var.instance_ami"
+  instance_type = var.instance_type
+  key_name      = "chkey1"
+
+  root_block_device {
+    volume_size = 20
+  }
+
+  tags = {
+    test = "New Changes1"
   }
 }
