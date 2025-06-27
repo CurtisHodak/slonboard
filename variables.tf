@@ -15,3 +15,18 @@ variable "instance_ami" {
   default     = "ami-0779fe5e56472b841"
   description = "ami id of the instance default arm amz linux"
 }
+
+variable "worker_pool_config" {
+  type    = string
+  default = ""
+}
+
+variable worker_pool_private_key {
+  type = string
+  default = ""
+}
+
+variable "worker_pool_id" {
+  type    = string
+  default = "01JTTTH31F1KDXDPQZWH46GQKP"
+}
