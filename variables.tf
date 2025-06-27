@@ -16,7 +16,12 @@ variable "instance_ami" {
   description = "ami id of the instance default arm amz linux"
 }
 
+variable "worker_pool_config" {
+  type    = string
+  default = ""
+}
+
 variable "worker_pool_id" {
-  type = string
+  type    = string
   default = "01JTTTH31F1KDXDPQZWH46GQKP"
 }
