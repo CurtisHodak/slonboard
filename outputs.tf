@@ -1,3 +1,3 @@
-output "instancetype" {
-    value = aws_instance.onboarding1.instance_type
-}
+# output "instancetype" {
+#     value = aws_instance.onboarding1.instance_type
+# }
