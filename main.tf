@@ -8,7 +8,7 @@ resource "aws_instance" "onboarding1" {
   }
 
   tags = {
-    test = "New Changes"
+    test = "New Changes789789"
   }
 }
 
