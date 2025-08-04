@@ -184,26 +184,12 @@
 # }
 #####
 
-# module "s3_bucket" {
-#   source = "terraform-aws-modules/s3-bucket/aws"
+module "s3testmoduleredo" {
+  source  = "spacelift.io/curtishodak/s3testmoduleredo/default"
+  version = "0.3.3"
 
-#   bucket = "testingbuckettestch12332"
-#   acl    = "private"
-
-#   control_object_ownership = true
-#   object_ownership         = "ObjectWriter"
-
-#   versioning = {
-#     enabled = true
-#   }
-# }
-
-# module "s3testmoduleredo" {
-#   source  = "spacelift.io/curtishodak/s3testmoduleredo/default"
-#   version = "0.2.8"
-
-#   # Optional inputs
-#    bucket     = teste423u84328423hu
-#   # tags       = map(any)
-#   # versioning = bool
-# }s
+  # Optional inputs
+  bucket = "teste423u84328423hu"
+  # tags       = map(any)
+  # versioning = bool
+}
