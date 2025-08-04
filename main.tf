@@ -189,7 +189,7 @@ module "s3testmoduleredo" {
   version = "0.3.3"
 
   # Optional inputs
-   bucket     = teste423u84328423hu
+  bucket = "teste423u84328423hu"
   # tags       = map(any)
   # versioning = bool
 }
