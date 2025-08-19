@@ -21,8 +21,8 @@ variable "worker_pool_config" {
   default = ""
 }
 
-variable "worker_pool_private_key" {
-  type    = string
+variable worker_pool_private_key {
+  type = string
   default = ""
 }
 
