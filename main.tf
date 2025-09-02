@@ -165,7 +165,7 @@ resource "aws_security_group_rule" "ingress_rule_3" {
 }
 
 module "main_workerpool" {
-  source = "github.com/spacelift-io/terraform-aws-spacelift-workerpool-on-ec2?ref=v3.0.3"
+ source = "github.com/spacelift-io/terraform-aws-spacelift-workerpool-on-ec2?ref=v5.2.0"
 
   secure_env_vars = {
     SPACELIFT_TOKEN            = var.worker_pool_config
@@ -182,28 +182,4 @@ module "main_workerpool" {
   security_groups   = [aws_security_group.main.id]
   vpc_subnets       = [aws_subnet.public.id, aws_subnet.private.id]
 }
-####
 
-module "s3_bucket" {
-  source = "terraform-aws-modules/s3-bucket/aws"
-
-  bucket = "testingbuckettestch12332"
-  acl    = "private"
-
-  control_object_ownership = true
-  object_ownership         = "ObjectWriter"
-
-  versioning = {
-    enabled = true
-  }
-}
-
-# module "s3testmoduleredo" {
-#   source  = "spacelift.io/curtishodak/s3testmoduleredo/default"
-#   version = "0.2.8"
-
-#   # Optional inputs
-#    bucket     = teste423u84328423hu
-#   # tags       = map(any)
-#   # versioning = bool
-# }s
