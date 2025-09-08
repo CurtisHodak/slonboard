@@ -14,11 +14,5 @@ provider "aws" {
     tags = {
       CreatedBy = "Terraform-custom"
     }
-  
-  ignore_tags {
-    keys = ["DoNotDelete", "Owner"]
-    key_prefixes = ["temp:", "test:"]
-  }
-
   }
 }
