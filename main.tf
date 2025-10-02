@@ -185,7 +185,7 @@
 
 module "s3testmodule" {
   source  = "spacelift.io/curtishodak/s3testmodule/default"
-  version = "01K6KBPZ61C7ZET0CWZX4ETBV9"
+  version = "0.4.2"
 
   # Optional inputs
    bucket     = "this-is-a-test-bucket-12345432432"
