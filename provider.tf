@@ -9,7 +9,6 @@ terraform {
 
 provider "aws" {
   region = var.aws_region
-  version = ">= 6.5.0"
   default_tags {
     tags = {
       CreatedBy = "Terraform-custom"
