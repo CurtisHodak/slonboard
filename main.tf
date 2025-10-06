@@ -183,12 +183,12 @@
 #   vpc_subnets       = [aws_subnet.public.id, aws_subnet.private.id]
 # }
 
-module "s3testmodule" {
-  source  = "spacelift.io/curtishodak/s3testmodule/default"
-  version = "0.4.2"
+# module "s3testmodule" {
+#   source  = "spacelift.io/curtishodak/s3testmodule/default"
+#   version = "0.4.2"
 
   # Optional inputs
-   bucket     = "this-is-a-test-bucket-12345432432"
+  #  bucket     = "this-is-a-test-bucket-12345432432"
   # tags       = map(any)
   # versioning = bool
-}
+# }
