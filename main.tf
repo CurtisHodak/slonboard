@@ -1,16 +1,16 @@
-# # resource "aws_instance" "onboarding1" {
-# #   ami           = var.instance_ami
-# #   instance_type = var.instance_type
-# #   key_name      = "chkey1"
+resource "aws_instance" "onboarding1" {
+  ami           = var.instance_ami
+  instance_type = var.instance_type
+  key_name      = "chkey1"
 
-# #   root_block_device {
-# #     volume_size = 20
-# #   }
+  root_block_device {
+    volume_size = 20
+  }
 
-# #   tags = {
-# #     test = "New Changes123"
-# #   }
-# # }
+  tags = {
+    test = "New Changes123"
+  }
+}
 
 # # resource "aws_instance" "onboarding2" {
 # #   ami           = var.instance_ami
@@ -181,14 +181,4 @@
 #   worker_pool_id    = var.worker_pool_id
 #   security_groups   = [aws_security_group.main.id]
 #   vpc_subnets       = [aws_subnet.public.id, aws_subnet.private.id]
-# }
-
-# module "s3testmodule" {
-#   source  = "spacelift.io/curtishodak/s3testmodule/default"
-#   version = "0.4.2"
-
-  # Optional inputs
-  #  bucket     = "this-is-a-test-bucket-12345432432"
-  # tags       = map(any)
-  # versioning = bool
 # }
